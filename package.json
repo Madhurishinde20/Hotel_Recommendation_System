@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "dependencies": {
     "body-parser": "^2.2.0",
     "cookie-parser": "^1.4.7",
@@ -8,5 +9,27 @@
     "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.14.1",
     "undefined": "^0.1.0"
+=======
+  "name": "hotel_recommendation_system",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Madhurishinde20/Hotel_Recommendation_System.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Madhurishinde20/Hotel_Recommendation_System/issues"
+  },
+  "homepage": "https://github.com/Madhurishinde20/Hotel_Recommendation_System#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mysql": "^2.18.1"
+>>>>>>> e0037d5c83e1c7c9e75700fea570cbe2337059a3
   }
 }
