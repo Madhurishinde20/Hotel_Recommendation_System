@@ -3,7 +3,7 @@ let mysql=require("mysql");
       host:"localhost",
       user:"root",
       password:"Madhuri@20",
-      database:"Hotel_management_System"
+      database:"Hotel_Recommendation_System"
  });
  conn.connect((err)=>{
      if(err){
