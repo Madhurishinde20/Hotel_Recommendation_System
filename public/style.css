@@ -2,7 +2,8 @@
   margin-left: 20px;
   margin-right: 20px;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 .navbar {
   display: flex;
@@ -41,7 +42,20 @@
 .nav-links li a:hover {
   background-color: #deb887;
 }
-
+.text{
+    height:200px;
+   background-color: burlywood;  
+   margin-top:-25px;
+   
+}
+.text h1{
+    padding:50px;
+  
+}
+.text p{
+    margin-top: -70px;
+    margin-left: 72px;;
+}
 form {
   width: 400px;
   margin: 50px auto;
