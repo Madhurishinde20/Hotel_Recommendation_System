@@ -1,0 +1,147 @@
+ul{
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    color: aliceblue;
+    padding: 30px;
+
+}
+ul li {
+
+    display: inline;
+    padding: 50px;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;\
+    
+}
+
+ul li a{
+    text-align: center;
+    text-decoration: wavy;
+    color: teal;
+    font-weight: bolder;
+    font-size: x-large;
+}
+
+body{
+    background-image: url("OIP.jpeg");
+    background-size:100% 100vh;
+    background-repeat: no-repeat;
+    
+}
+.box{
+    background-color:  #1c0412;
+    padding: 20px;
+    width: 100%;
+    height: 8vh;
+    justify-content: center;
+    margin-top:-5px;
+    margin-left: -5px;
+    
+
+}
+
+ .box ul{
+    list-style-type:none;
+    flex-direction:row;
+    display:flex;
+    gap:90px;
+    margin-top:-5px;
+       
+
+}
+
+.box ul li a{
+    padding-left: 10px;
+    text-decoration: none;
+    color: orange;
+    font-size: x-large;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.box ul li a:hover {
+    background-color: white;
+    color: #007BFF;
+    border-radius: 8px;
+}
+.box ul li select {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 1;
+}
+
+.box ul li:hover select {
+  display: block;
+}
+.form-container {
+    background: rgb(10, 121, 172);
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(47, 122, 180, 0.1);
+    width: 350px;
+    margin-left: 450px;
+    opacity: 0.8;
+    
+
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #eff5fa;
+    font-weight: bold;
+
+}
+
+.form-container form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: medium;
+}
+
+.form-container form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-container form button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.dropdown dropdown-content{
+
+    color: azure;
+}
+.dropdown .dropdown-content a
+{
+    color: white;
+    font-size: small;
+}
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #130f11;
+    color: #eeeaea; 
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    font-size: small;
+    }

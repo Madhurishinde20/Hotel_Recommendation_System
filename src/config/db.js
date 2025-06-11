@@ -1,9 +1,9 @@
-let mysql=require("mysql");
+let mysql=require("mysql2");
  let conn=mysql.createConnection({
       host:"localhost",
       user:"root",
-      password:"Madhuri@20",
-      database:"Hotel_management_System"
+      password:"root",
+      database:"hotel"
  });
  conn.connect((err)=>{
      if(err){
