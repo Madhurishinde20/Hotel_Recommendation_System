@@ -8,11 +8,14 @@
 </head>
 <body>
     <form name="frm" action="/validate" method="POST">
-    
+        <h1>Login</h1>
     <input type="text" name="username" value="" placeholder="Enter Username"><br><br>
     <input type="text" name="password" value="" placeholder="Enter Password"><br><br>
     <input type="submit" name="s" value="login"><br><br>
+    <p class="toggle-link">Don't have an account? <a href="/signup">Register</a></p>
+
   <%=msg%>
   </form>
+
 </body>
 </html>
