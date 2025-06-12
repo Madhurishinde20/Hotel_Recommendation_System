@@ -252,14 +252,17 @@ form input[type="submit"]:hover {
       margin-top: 30px;
     }
 
+    @media(max-width: 768px) {
+  
+
     .search-btn:hover {
       background-color: #d2b48c;
     }
-
-    @media (max-width: 768px) {
-      .booking-form {
+     
+    .booking-form {
         flex-direction: column;
         height: auto;
+         align-items:stretch;
       }
 
       .fields-wrapper {
@@ -279,9 +282,49 @@ form input[type="submit"]:hover {
       padding: 50px 30px;
       border-radius: 12px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      color: #fff;
+      color: #fff;}
+}
+.scroll-wrapper {
+    width: 80%;
+    margin: 35px auto 0 auto;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
+.scroll-wrapper h1 {
+    font-size: 36px;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.scroll-item {
+    width: 350px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-text {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 16px;
+}
 
 
 
