@@ -111,3 +111,178 @@ form input[type="submit"]:hover {
 .toggle-link a:hover {
   text-decoration: underline;
 }
+
+.destination {
+  text-align: center;
+  padding: 60px 20px;
+  background: url('/images/world-map-light.svg') no-repeat center 80%;
+  background-size: 120% auto;
+}
+
+.destination h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #333;
+  position: relative;
+}
+.destination h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #ffc107;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.destination h3 {
+  font-size: 1.2rem;
+  color: #666;
+  font-weight: 300;
+  margin-top: 0;
+}
+.card-grid {
+  margin-top: -50px;
+  display: grid;
+  gap: 16px;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+.card:hover img {
+  transform: scale(1.05);
+}
+
+    .booking-form {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      background-color:burlywood;
+      padding: 20px;
+      width: 85%;
+      margin: 50px auto;
+      height: 80px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      
+    
+    }
+
+    .fields-wrapper {
+      display: flex;
+      gap: 15px;
+      align-items: flex-end;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      color: white;
+    }
+
+    label {
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    input[type="date"], select {
+      padding: 10px;
+      border: 1px solid #2f3d6a;
+      border-radius: 4px;
+      background-color: #24325c;
+      color: white;
+      font-size: 14px;
+    }
+
+    input[type="date"] {
+      width: 300px;
+      margin-bottom:25px;
+    }
+
+    select {
+      width: 140px;
+      margin-bottom:25px;
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1);
+    }
+
+    .search-btn {
+      background-color: #35a6d4;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      padding: 0 30px;
+      height:50px;
+      align-self: stretch;
+      margin-bottom:2px;
+      margin-top: 30px;
+    }
+
+    .search-btn:hover {
+      background-color: #d2b48c;
+    }
+
+    @media (max-width: 768px) {
+      .booking-form {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .fields-wrapper {
+        flex-direction: column;
+      }
+
+      input[type="date"], select, .search-btn {
+        width: 100%;
+      }
+
+      .search-btn {
+        height: 50px;
+        padding: 10px;
+      }
+    .back {
+      background: url('/images/hero-bg.jpg') center/cover no-repeat;
+      padding: 50px 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      color: #fff;
+}
+
+
+
+
+    
