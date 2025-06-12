@@ -1,4 +1,4 @@
-let regService=require("../services/userService.js");
+let regService=require("../services/RegisterService.js");
 const bcrypt = require("bcryptjs");
 let jwt=require("jsonwebtoken");
 let cookie=require("cookie-parser");
