@@ -11,6 +11,11 @@
         <h1>Login</h1>
     <input type="text" name="username" value="" placeholder="Enter Username"><br><br>
     <input type="text" name="password" value="" placeholder="Enter Password"><br><br>
+   <select name="type" class="form-control" style="width:335px; height:40px;" >
+  <option value="" disabled selected hidden>Select Role</option>
+  <option value="Admin">Admin</option>
+  <option value="User">User</option>
+   </select>
     <input type="submit" name="s" value="login"><br><br>
     <p class="toggle-link">Don't have an account? <a href="/signup">Register</a></p>
   <%=msg%>

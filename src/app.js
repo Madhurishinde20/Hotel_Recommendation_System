@@ -1,5 +1,5 @@
 let express=require("express");
-let bodyparser=require("body-parser");
+let bodyParser=require("body-parser");
 let cookieParser=require("cookie-parser");
 let router=require("../src/routes/userRoutes.js");
 
@@ -9,7 +9,7 @@ let app=express();
 app.set('view engine','ejs');
 app.use(express.static("public"));
 app.use(express.urlencoded({extended:true}));
-app.use(bodyparser.json());
+app.use(bodyParser.json());
 app.use(cookieParser());
 app.use("/", router);
 

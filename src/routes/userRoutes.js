@@ -15,6 +15,11 @@ router.get("/signin", controller.regLogin);
 router.get("/signup", controller.regCtrl);
 
 router.post("/validate",controller.validateUser);
+ 
+router.get("/admin", controller.adminDashboard);
 
+router.get("/userhome", (req, res) => {
+  res.render("admin"); 
+});
 
 module.exports=router;
