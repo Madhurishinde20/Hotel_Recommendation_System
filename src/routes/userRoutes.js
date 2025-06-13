@@ -1,20 +1,25 @@
 let express = require("express");
-let routes=require("express");
+let router=express.Router();
 
 let controller=require("../controller/regctrl.js");
-let router=routes.Router();
+
 
 router.get("/",(req,res)=>{
     res.render("home");
 })
 
-router.get("/reg",controller.regctrl);
+router.get("/reg",controller.regCtrl);
 router.post("/savereg",controller.saveReg);
 router.get("/login",controller.regLogin);
 router.get("/signin", controller.regLogin);
-router.get("/signup", controller.regctrl);
+router.get("/signup", controller.regCtrl);
 
 router.post("/validate",controller.validateUser);
+ 
+router.get("/admin", controller.adminDashboard);
 
+router.get("/userhome", (req, res) => {
+  res.render("admin"); 
+});
 
 module.exports=router;

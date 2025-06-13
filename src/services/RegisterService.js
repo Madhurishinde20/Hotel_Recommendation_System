@@ -1,5 +1,5 @@
 let bcrypt = require("bcryptjs");
-let regModel = require("../models/usermodel.js");
+let regModel = require("../models/regmodel.js");
 
 exports.regserviceLogic = async (username, useremail, password, contact, type) => {
   try {

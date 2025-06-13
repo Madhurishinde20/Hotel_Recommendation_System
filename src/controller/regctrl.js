@@ -1,4 +1,4 @@
-let regService=require("../services/userService.js");
+let regService=require("../services/RegisterService.js");
 const bcrypt = require("bcryptjs");
 let jwt=require("jsonwebtoken");
 let cookie=require("cookie-parser");
@@ -31,10 +31,11 @@ exports.regLogin=((req,res)=>{
 
 exports.validateUser = async (req, res) => {
   try {
-    const { username, password } = req.body;
+    const { username, password,type } = req.body;
 
-    if (!username || !password) {
-      return res.status(400).send("Username and password are required");
+    if (!username || !password  || !type)
+     {
+      return res.status(400).send("");
     }
     const user = await regService.getOriginalPassword(username);
     if (!user) {
@@ -48,12 +49,34 @@ exports.validateUser = async (req, res) => {
         },"11$$$66&&&&4444", { expiresIn: "1h" }
       );
       console.log("Generated Token:", token);
-      return res.send({ message: "Login successful", token });
-    } else {
+
+      /*return res.send({ message: "Login successful", token });
+    }*/
+    if (type === "Admin") 
+      {
+        return res.redirect("/admin");
+      }
+       else if (type === "User")
+         {
+        return res.redirect("/userhome");
+       } 
+       else 
+        {
+             return res.render("login", { msg: "Invalid role selected" });
+        }
+      }
+
+    else 
+    {
       return res.send("Incorrect password");
     }
   } catch (err) {
     console.error("Error in validateUser:", err);
     res.status(500).send("Internal server error");
   }
+};
+
+// controller/adminController.js
+exports.adminDashboard= (req, res) => {
+    res.render("admin");
 };
