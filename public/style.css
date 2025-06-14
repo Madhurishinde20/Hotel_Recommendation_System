@@ -58,15 +58,25 @@
   font-size: 18px;
   font-style: italic;
 }
+.loginform {
+  margin: 20px 40px;
+  background-color: hwb(224 63% 17% / 0.886);
+  margin-left: 150px;;
+  padding: 40px;
+  width: 80%;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(100, 149, 237, 0.6); /* cornflowerblue shadow */
+}
 
 form {
   width: 400px;
   margin: 50px auto;
   padding: 30px;
   background-color: #fdf5e6;
-  border: 1px solid #ccc;
+  border: 1px solid lightgrey;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 15px rgba(255, 182, 193, 0.4);
   font-family: Arial, sans-serif;
 }
 
@@ -88,7 +98,7 @@ form input[type="submit"] {
 }
 
 form input[type="submit"] {
-  background-color: burlywood;
+  background-color:rgb(175, 175, 234);
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -102,7 +112,7 @@ form input[type="submit"]:hover {
   text-align: center;
   display: block;
   margin-top: 10px;
-  color: #0077cc;
+  color: black;
   font-weight: bold;
 }
 
@@ -140,7 +150,7 @@ form input[type="submit"]:hover {
 
 .destination h3 {
   font-size: 1.2rem;
-  color: #666;
+  color:gray;
   font-weight: 300;
   margin-top: 0;
 }
@@ -192,7 +202,7 @@ form input[type="submit"]:hover {
       display: flex;
       justify-content: space-between;
       align-items: stretch;
-      background-color:burlywood;
+      background-color:seashell;
       padding:-25px;
       width: 85%;
       margin: 50px auto;

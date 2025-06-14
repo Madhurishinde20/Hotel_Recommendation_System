@@ -18,8 +18,7 @@ router.post("/validate",controller.validateUser);
  
 router.get("/admin", controller.adminDashboard);
 
-router.get("/userhome", (req, res) => {
-  res.render("admin"); 
-});
+// Admin Dashboard Sections
+router.get("/admin", controller.adminDashboard); 
 
 module.exports=router;
