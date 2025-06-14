@@ -54,11 +54,12 @@ exports.validateUser = async (req, res) => {
     }*/
     if (type === "Admin") 
       {
-        return res.redirect("/admin");
+           res.render("admin.ejs");
+
       }
        else if (type === "User")
          {
-        return res.redirect("/userhome");
+            res.send("user");
        } 
        else 
         {
@@ -76,7 +77,7 @@ exports.validateUser = async (req, res) => {
   }
 };
 
-// controller/adminController.js
-exports.adminDashboard= (req, res) => {
-    res.render("admin");
+exports.adminDashboard = (req, res) => {
+  res.render("admin");
 };
+
