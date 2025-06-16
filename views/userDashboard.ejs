@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Panel</title>
+  <style>
+    /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+header {
+  background-color: #003366;
+  padding: 20px 0;
+  text-align: center;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0;
+  background-color: #0059b3;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  background-color: #0073e6;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #3399ff;
+}
+
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #003366;
+  margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1> User Panel</h1>
+    <nav>
+      <u>
+        <li><a href="/user/hotels">Browse Hotels</a></li>
+        <li><a href="/user/bookings">My Bookings</a></li>
+        <li><a href="/user/recommendations">Recommended Hotels</a></li>
+        <li><a href="/user/profile">My Profile</a></li>
+        <li><a href="/user/logout">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+     <h1> user dashboard</h1>
+  </main>
+</body>
+</html>

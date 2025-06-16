@@ -2,6 +2,7 @@ let regService=require("../services/RegisterService.js");
 const bcrypt = require("bcryptjs");
 let jwt=require("jsonwebtoken");
 let cookie=require("cookie-parser");
+let db=require("../config/db.js");
 
 exports.homeCtrl=(req,res)=>{
     res.render("home.ejs");
@@ -54,12 +55,12 @@ exports.validateUser = async (req, res) => {
     }*/
     if (type === "Admin") 
       {
-           res.render("admin.ejs");
+           res.redirect("admin");
 
       }
        else if (type === "User")
          {
-            res.send("user");
+            res.render("User/userDashboard.ejs");
        } 
        else 
         {
@@ -77,7 +78,30 @@ exports.validateUser = async (req, res) => {
   }
 };
 
+
 exports.adminDashboard = (req, res) => {
-  res.render("admin");
+  let section = req.query.section || "";
+  res.render("admin",{section});
 };
+
+exports.Citypage=(req,res)=>{
+
+	res.render("city.ejs",{msg:"null"});
+
+};
+
+exports.SaveCity=(req,res)=>
+{
+ let {city_name,pincode}=req.body;
+
+db.query("insert into citymaster  values(?,?)", [city_name,pincode],(err,result)=>
+{
+	if(err){
+		res.render("city.ejs",{msg:"Some Problem Occured while Adding city"});
+	}else{
+		res.render("city.ejs",{msg:"city added successfully"});
+	}
+});
+};
+
 
