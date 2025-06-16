@@ -106,31 +106,31 @@ button:hover {
       <div class="error" id="error_hotel_name"></div>
     </div>
 
-    <div class="form-group">
-      <label for="hotel_address">Hotel Address</label>
-      <input type="text" id="hotel_address" name="hotel_address" maxlength="200">
-      <div class="error" id="error_hotel_address"></div>
-    </div>
+    <div class="form-group ">
+          <label>Hotel Address</label>
+          <input type="text" class="form-control" name="hotel_address" placeholder="Enter Hotel Address" />
+        </div>
 
-    <div class="form-group">
-      <label for="city_id">City</label>
-      <select id="city_id" name="city_id">
-        <option value="">--Select City--</option>
-        <option value="1">City A</option>
-        <option value="2">City B</option>
-      </select>
-      <div class="error" id="error_city_id"></div>
-    </div>
+        <div class="form-group ">
+          <label>City</label>
+          <select name="city_id" class="form-control" onchange="fetcharea(this.value)" id="ns">
+            <option selected disabled>Select City</option>
+            <% Citdata.forEach((item, index) => { %>
+              <option value="<%= item.city_id %>"><%= item.city_name %></option>
+            <% }); %>
+          </select>
+        </div>
 
-    <div class="form-group">
-      <label for="area_id">Area</label>
-      <select id="area_id" name="area_id">
-        <option value="">--Select Area--</option>
-        <option value="101">Area X</option>
-        <option value="102">Area Y</option>
-      </select>
-      <div class="error" id="error_area_id"></div>
-    </div>
+        <div class="form-group ">
+          <label>Area</label>
+          <select name="area_id" class="form-control" id="area">
+            <option selected disabled>Select Area</option>
+            <% Areadata.forEach((item, index) => { %>
+              <option value="<%= item.area_id %>"><%= item.area_name %></option>
+            <% }); %>
+          </select>
+        </div>
+
 
     <div class="form-group">
       <label for="hotel_email">Hotel Email</label>
@@ -144,17 +144,26 @@ button:hover {
       <div class="error" id="error_hotel_contact"></div>
     </div>
 
-    <div class="form-group">
-      <label for="rating">Rating (0.0 - 5.0)</label>
-      <input type="number" id="rating" name="rating" step="0.1" min="0" max="5">
-      <div class="error" id="error_rating"></div>
-    </div>
+     <div class="form-group ">
+          <label>Rating</label>
+          <input type="text" class="form-control" name="rating" placeholder="Enter Rating" />
+        </div>
 
     <div class="form-group">
       <label for="reviewcount">Review Count</label>
       <input type="number" id="reviewcount" name="reviewcount" min="0">
       <div class="error" id="error_reviewcount"></div>
     </div>
+
+    <div class="form-group ">
+          <label>Hotel Image</label>
+          <select name="pic_id" class="form-control">
+            <option selected disabled>Select Image</option>
+            <% Picdata.forEach((item, index) => { %>
+              <option value="<%= item.pic_id %>"><%= item.filename %></option>
+            <% }); %>
+          </select>
+        </div>
 
     <button type="submit">Submit Hotel</button>
   </form>
