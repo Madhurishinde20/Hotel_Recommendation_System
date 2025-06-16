@@ -60,7 +60,7 @@ exports.validateUser = async (req, res) => {
       }
        else if (type === "User")
          {
-            res.render("User/userDashboard.ejs");
+            res.render("userDashboard.ejs");
        } 
        else 
         {
@@ -78,30 +78,105 @@ exports.validateUser = async (req, res) => {
   }
 };
 
+//Admin Dashboard routers
 
 exports.adminDashboard = (req, res) => {
   let section = req.query.section || "";
   res.render("admin",{section});
 };
 
-exports.Citypage=(req,res)=>{
+// hotel all Controller
+exports.hotelDashCtrl=(req,res)=>{
+  res.render("hotelDashboard.ejs");
+}
 
-	res.render("city.ejs",{msg:"null"});
+exports.hotelformCtrl=(req,res)=>{
+  //fetch city
 
-};
+  res.render("hotel.ejs");
+}
 
-exports.SaveCity=(req,res)=>
-{
- let {city_name,pincode}=req.body;
-
-db.query("insert into citymaster  values(?,?)", [city_name,pincode],(err,result)=>
-{
-	if(err){
-		res.render("city.ejs",{msg:"Some Problem Occured while Adding city"});
-	}else{
-		res.render("city.ejs",{msg:"city added successfully"});
-	}
+exports.hotelviewCtrl=(req,res)=>{
+   let query = `SELECT h.hotel_id, p.filename, h.hotel_name, h.hotel_address, c.city_name, a.area_name, h.hotel_email, h.hotel_contact, h.rating FROM hotelmaster h LEFT JOIN hotelpicjoin p ON h.pic_id = p.pic_id JOIN citymaster c ON h.city_id = c.city_id JOIN areamaster a ON h.area_id = a.area_id`;
+db.query(query, (err, result) => {
+    if (err) {
+      
+      return res.render("hotelview.ejs"); 
+    } 
+    else {
+      res.render("hotelview.ejs");
+    }
 });
 };
 
 
+// City All Controller
+  exports.CityDashCtrl=(req,res)=>{
+	res.render("cityDashboard.ejs");
+};
+
+exports.cityformCtrl=(req,res)=>{
+  res.render("city.ejs");
+}
+exports.cityadd=(req,res)=>
+{
+  let{city_name,pincode}=req.body;
+
+  db.query("select city_id from citymaster order by city_id desc limit 1",(err,result)=>
+  {
+      if(err)
+      {
+        console.log(err);
+      }
+      else
+      {
+        if(result.length==0)
+        {
+          var ccid=0+1;
+          console.log(ccid);
+           db.query("insert into citymaster values(?,?,?)",[ccid,city_name,pincode],(err,result)=>
+          {
+           if(err)
+          {
+        console.log(err); 
+          }
+      else
+      {
+        console.log("sucessfull");
+      }
+  ``});
+        }
+        else
+        {
+           var ccid=result[0].city_id+1;
+           console.log(ccid);
+           db.query("insert into citymaster values(?,?,?)",[ccid,city_name,pincode],(err,result)=>
+        {
+      if(err)
+      {
+        console.log(err);
+      }
+      else
+      {
+        console.log("sucessfull");
+      }
+  });
+        }
+      }
+  });
+}
+//Area Controller
+ exports.areaDashCtrl=(req,res)=>{
+	res.render("areaDashboard.ejs");
+};
+
+exports.areaformCtrl=(req,res)=>{
+  res.render("area.ejs");
+}
+
+
+// User Dashboard Router
+exports.userPanel=(req,res)=>{
+  res.render("userDashboard");
+}
+  
