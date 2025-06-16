@@ -24,11 +24,7 @@
     <input type="text" name="contact" id="contact" placeholder="Enter Contact Number" oninput="validateContact(this.value)"><br><br>
     <span id="cmsg"></span>
 
-    <select name="type" class="form-control" required style="width:335px; height:40px;">
-      <option value="" disabled selected hidden>Select Role</option>
-      <option value="Admin">Admin</option>
-      <option value="User">User</option>
-    </select>
+     <input type="text" name="type" value="User" readonly /><br><br>
 
     <input type="submit" value="Register" />
     <br><br>
