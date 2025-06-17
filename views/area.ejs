@@ -48,7 +48,7 @@
     .alert {
       margin-bottom: 25px;
       padding: 15px;
-      background-color: #ffcc00;
+      background-color: purple;
       color: #333;
       border-radius: 5px;
       text-align: center;
@@ -63,7 +63,7 @@
     }
 
     .btn-orange {
-      background-color: #ff8800;
+      background-color: purple;
       color: #fff;
       font-weight: 600;
       width: 160px;
@@ -78,7 +78,7 @@
     }
 
     .btn-orange:hover {
-      background-color: #e67300;
+      background-color: purple;
     }
 
     @media (max-width: 768px) {
@@ -102,8 +102,7 @@
 
   <div class="box">
     <h2>Add New Area</h2>
-
-    <form action="/savearea" method="post">
+    <form action="/areaadd" method="post">
 
       <div class="form-group">
         <input type="text" id="area_name" name="area_name" placeholder="Enter Area Name" required />
@@ -111,11 +110,14 @@
       <!-- Buttons -->
       <div class="btn-row">
         <input type="submit" class="btn-orange" value="Add Area" />
-        <a href="/" class="btn-orange"><i class="fas fa-arrow-left mr-1"></i>Back</a>
       </div>
+       <% if (typeof msg !== 'undefined') { %>
+    <div style="color: green; margin-bottom: 10px;">
+      <%= msg %>
+    </div>
+     <% } %>
 
     </form>
   </div>
-
 </body>
 </html>
