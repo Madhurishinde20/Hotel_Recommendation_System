@@ -1,4 +1,15 @@
 {
+<<<<<<< HEAD
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.14.1",
+    "undefined": "^0.1.0"
+=======
   "name": "hotel_recommendation_system",
   "version": "1.0.0",
   "main": "index.js",
@@ -30,9 +41,13 @@
     "jsonwebtoken": "^9.0.2",
     "multer": "^2.0.1",
     "mysql": "^2.18.1"
+<<<<<<< HEAD
   },
   "devDependencies": {
     "eslint": "^9.28.0",
     "nodemon": "^3.1.10"
+=======
+>>>>>>> e0037d5c83e1c7c9e75700fea570cbe2337059a3
+>>>>>>> manorama_features
   }
 }
