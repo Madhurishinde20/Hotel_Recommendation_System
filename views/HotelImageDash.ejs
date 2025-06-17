@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hotel Admin Template</title>
+  <title>Hotel Image Dash</title>
 
   
   <link rel="stylesheet" href="styleHotelDash.css" />
@@ -177,8 +177,8 @@ html, body {
     <nav class="navbar">
 
       <ul class="nav">
-        <li><a class="nav-link active" onclick="loadPage('/areaform', this)">Add Area</a></li>
-        <li><a class="nav-link" onclick="loadPage('/viewarea', this)">View Area</a></li>
+        <li><a class="nav-link active" onclick="loadPage('', this)">Add Hotel Image</a></li>
+        <li><a class="nav-link" onclick="loadPage('/hotelviewdata', this)">View Hotel Image</a></li>
       </ul>
     </nav>
   </div>
@@ -188,13 +188,6 @@ html, body {
       <iframe id="contentFrame" src="" scrolling="yes"></iframe>
     </div>
   </nav>
-
-  <!-- Main Content -
-  <div class="content">
-    <h1>Welcome to the Hotel Admin Dashboard</h1>
-    <p>Use the navbar to add new hotels or view existing entries.</p>
-  </div>-->
-
   <script>
     function loadPage(page, clickedLink) {
       document.getElementById('contentFrame').src = page;

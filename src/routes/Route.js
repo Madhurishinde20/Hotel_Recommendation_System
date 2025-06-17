@@ -28,18 +28,32 @@ router.get("/hotelform",controller.hotelformCtrl);
 router.get("/hotelviewdata",controller.hotelviewCtrl);
 
 
+router.get("/hotelImgDash",controller.hotelImageDashCtrl);
+
+
+
+
 router.get("/cityDash",controller.CityDashCtrl);
  
 router.get("/cityform",controller.cityformCtrl);
 
 router.post("/cityadd",controller.cityadd);
 
+router.get("/viewcity",controller.viewCityCtrl);
+
+router.get("/deleteCity",controller.CityDeleteCtrl);
+
 
 router.get("/areaDash",controller.areaDashCtrl);
  
 router.get("/areaform",controller.areaformCtrl);
 
-router.post("/areaadd",controller.areaaddCtrl);
+router.post("/areaadd",controller.areaadd);
+
+router.get("/viewarea",controller.viewAreaCtrl);
+
+router.get("/deletearea",controller.areaDeleteCtrl);
+
 
 
 // User DashBorad Controller
